@@ -12,12 +12,12 @@ typedef struct CString
 CString* cstring_new(const char* str)
 {
 	size_t size = strlen(str);
-	CString* o = malloc(sizeof(CString));
+	CString* q = malloc(sizeof(CString));
 	char* buffer = malloc(size+1);
 	strcpy(buffer, str);
-	o->text = buffer;
-	o->size = size;
-	return o;
+	q->text = buffer;
+	q->size = size;
+	return q;
 }
 
 size_t cstring_length(CString* str)
@@ -44,15 +44,15 @@ void cstring_set(CString* str, int pos, char a)
 
 int main()
 {
-	CString* c;
-	assert(c = cstring_new("kreda"));
-	char* a = cstring_text(c);
-	printf("%s\n", a);
-	printf("%zu\n", cstring_length(c));
-	printf("%c\n", cstring_get(c, 0));
-	cstring_set(c, 3, 't');
-	char* b = cstring_text(c);
-	printf("%s\n", b);
+	CString* a;
+	assert(a = cstring_new("kreda"));
+	char* t1 = cstring_text(a);
+	printf("%s\n", t1);
+	printf("%zu\n", cstring_length(a));
+	printf("%c\n", cstring_get(a, 0));
+	cstring_set(a, 3, 't');
+	char* t2 = cstring_text(a);
+	printf("%s\n", t2);
 	
 	return 0;
 }
