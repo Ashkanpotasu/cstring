@@ -5,9 +5,9 @@
 
 Opcja 1:
 
-gcc main.c -o exec
+gcc main.c -o main
 
-./exec
+./main
 
 Opcja 2:
 
