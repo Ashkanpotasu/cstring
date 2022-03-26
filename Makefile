@@ -1,3 +1,3 @@
 start:
-	@gcc main.c -o exec
-	@./exec
+	@gcc main.c -o main
+	@./main
